@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PicController extends Controller
+class GroupPicController extends Controller
 {
     //
 }

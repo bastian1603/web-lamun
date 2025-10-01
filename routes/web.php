@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LamunGroupController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,3 +15,9 @@ Route::get('/dashboard', function () {
 Route::get('/upload_pic', function () {
    return view('admin/upload_pic'); 
 });
+
+Route::get('/organize', function () {
+   return view('admin/lamun_organize');
+});
+
+Route::resource('/lamun', LamunGroupController::class);
