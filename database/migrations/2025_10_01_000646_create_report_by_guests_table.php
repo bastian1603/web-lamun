@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lamun_groups', function (Blueprint $table) {
+        Schema::create('report_by_guests', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('location');
-            $table->string('condition');
-            $table->string('wide');
-            $table->timestamps();
+            $table->string('phone_no');
+            $table->foreignId('report_id')->constrained('reports', 'id')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lamun_groups');
+        Schema::dropIfExists('report_by_guests');
     }
 };
