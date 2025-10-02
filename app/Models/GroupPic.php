@@ -9,6 +9,7 @@ class GroupPic extends Model
     protected $fillable = [
         'path', 'lamun_group_id'
     ];
+    public $timestamps = false;
 
     public function lamunGroup()
     {

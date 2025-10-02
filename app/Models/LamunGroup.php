@@ -14,5 +14,4 @@ class LamunGroup extends Model
     {
         return $this->hasMany(GroupPic::class, 'lamun_group_id', 'id');
     }
-
 }

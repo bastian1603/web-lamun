@@ -16,5 +16,22 @@ class LamunGroupController extends Controller
 
         $new_item = LamunGroup::create();
     }
+
+    public function update()
+    {
+
+    }
+
+    public function destroy()
+    {
+
+    }
+
+    public function index()
+    {
+
+    }
+
+    public function 
     
 }

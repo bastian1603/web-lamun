@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('path');
             $table->foreignId('lamun_group_id')->constrained('lamun_groups', 'id')->onDelete('cascade')->onUpdate('cascade');
-            // $table->timestamps();
         });
     }
 
