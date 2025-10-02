@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('lamun_groups', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table
+            $table->integer('wide');
+            $table->string('condition');
+            $table->string('location');
             $table->timestamps();
         });
     }
