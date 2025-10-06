@@ -11,6 +11,11 @@ class ReportByAdmin extends Model
 
     public function report()
     {
-        return $this->belongsTo(Report::class);
+        return $this->belongsTo(Report::class, 'report_id', 'id');
+    }
+
+    public function admin()
+    {
+        return $this->belongsTo(User::class, 'admin_id', 'id');
     }
 }

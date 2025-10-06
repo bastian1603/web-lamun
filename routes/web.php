@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LamunGroupController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,3 +22,7 @@ Route::get('/organize', function () {
 });
 
 Route::resource('/lamun', LamunGroupController::class);
+
+Route::resource('/report', ReportController::class);
+
+Route::get('/new_report', [ReportController::class, 'create']);

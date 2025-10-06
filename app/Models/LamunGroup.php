@@ -10,7 +10,7 @@ class LamunGroup extends Model
         'name', 'location', 'condition', 'wide'
     ];
 
-    public function hasPic()
+    public function has_pic()
     {
         return $this->hasMany(GroupPic::class, 'lamun_group_id', 'id');
     }

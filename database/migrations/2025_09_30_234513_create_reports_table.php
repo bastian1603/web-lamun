@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
             $table->string('location');
-            $table->string('verification');
+            $table->tinyInteger('verification')->default(0);
             $table->boolean('by_admin');
             $table->foreignId('lamun_group_id')->constrained('lamun_groups', 'id')->nullable()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

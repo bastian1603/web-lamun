@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('group_pics', function (Blueprint $table) {
             $table->id();
-            $table->string('path');
+            $table->string('path')->nullable();
             $table->foreignId('lamun_group_id')->constrained('lamun_groups', 'id')->onDelete('cascade')->onUpdate('cascade');
         });
     }
